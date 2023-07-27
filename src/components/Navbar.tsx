@@ -46,7 +46,7 @@ const NavbarItem = styled.li`
 `;
 
 const NavbarLink = styled.a`
-  color: #gray;
+  color: #fff;
   text-decoration: none;
   font-size: 16px;
   padding: 8px 12px;
@@ -66,12 +66,11 @@ const DropdownOptions = styled.div`
   z-index: 1;
   background-color: #000852;
   color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
   @media (min-width: 1000px) {
     display: none;
   }
-
 `;
 
 const Option = styled.div`
@@ -102,6 +101,7 @@ const ButtonDropdown = styled.button`
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 16px;
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
@@ -115,9 +115,14 @@ const ButtonDropdown = styled.button`
 `;
 
 const MyAnimeImage = styled.img`
-  max-width: 100%;
-  max-height: 25px;
+  max-width: 900px;
+  max-height: 40px;
   border-radius: 5px;
+  @media (min-width: 1000px) {
+    max-width: 1000px;
+    max-height: 75px;
+    padding: -300px;
+  }
 `;
 
 const Navbar: React.FC = () => {
@@ -143,8 +148,8 @@ const Navbar: React.FC = () => {
           </ButtonDropdown>
           {showDropdown && (
             <DropdownOptions>
-            <Option>My Collection</Option>
-          </DropdownOptions>
+              <Option>My Collection</Option>
+            </DropdownOptions>
           )}
         </NavbarDropdown>
       </NavbarList>

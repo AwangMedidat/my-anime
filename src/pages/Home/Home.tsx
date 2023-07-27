@@ -98,9 +98,9 @@ const ContainerStar = styled.div`
 `;
 
 const HomeContainer = styled.div`
-  margin-top: 70px;
+  margin-top: 80px;
   @media (min-width: 1000px) {
-    margin-top: 110px;
+    margin-top: 150px;
   }
 `;
 
