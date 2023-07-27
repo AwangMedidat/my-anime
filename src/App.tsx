@@ -26,7 +26,7 @@ const GET_ANIME_LIST = gql`
 
 const AnimeListContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   padding: 5px;
@@ -35,9 +35,9 @@ const AnimeListContainer = styled.div`
 const AnimeCard = styled.div`
   border: 1px solid #ddd;
   border-radius: 10px;
-  max-width: 159px;
-  max-height: 200px;
-  margin: 5px;
+  max-width: 180px;
+  max-height: 250px;
+  margin: 13px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
@@ -102,7 +102,7 @@ const App: React.FC = () => {
       <AnimeListContainer>
         {animeList.map((anime: Anime) => (
           <AnimeCard key={anime.id}>
-            <AnimeImage src={anime.coverImage?.medium} alt="" />
+            <AnimeImage src={anime.coverImage?.large} alt="" />
             <AnimeText>
               <AnimeTitle>{anime.title.romaji}</AnimeTitle>
               {/* <AnimeGenres genres={anime.genres} /> */}

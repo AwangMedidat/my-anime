@@ -59,8 +59,8 @@ const NavbarDropdown = styled.div`
 
 const ButtonDropdown = styled.button`
   display: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #cee6f3;
+  border: 1px solid #cee6f3;
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 16px;
@@ -68,7 +68,7 @@ const ButtonDropdown = styled.button`
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: #cee6f3;
   }
 
   @media (max-width: 600px) {
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
         </NavbarItem>
 
         <NavbarDropdown>
-          <ButtonDropdown onClick={toggleDropdown}>☰</ButtonDropdown>
+          <ButtonDropdown onClick={toggleDropdown}>{showDropdown ? "X" : "☰"}</ButtonDropdown>
           {showDropdown && (
             <div>
               <NavbarLink key={1} href="#">
