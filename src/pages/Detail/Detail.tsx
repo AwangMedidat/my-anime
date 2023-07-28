@@ -29,24 +29,43 @@ const BannerImageAnime = styled.img`
   position: relative;
   margin-top: 52px;
   @media (min-width: 1000px) {
-    height: 400px;
-    margin-top: 108px;
+    height: 350px;
+    margin-top: 78px;
+  }
+`;
+
+const AnimeContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const AnimeTextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: justify;
+  @media (min-width: 1000px) {
+    margin-top: 10px;
   }
 `;
 
 const ImagePoster = styled.img`
-  width: 20%;
-  height: 30%;
-  position: absolute;
-  margin: 230px 40px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
+  width: 30%;
+  height: 50%;
+  margin: 20px 20px 25px 15px;
   @media (min-width: 1000px) {
     width: 15%;
-  height: 47%;
-  margin: 110px 150px;
+    height: 47%;
+    margin: 35px 30px 25px 105px;
+  }
+`;
+
+const AnimeDescription = styled.p`
+  font-size: 10px;
+  margin-top: -4px;
+  @media (min-width: 1000px) {
+    font-size: 13px;
   }
 `;
 
@@ -75,11 +94,21 @@ const Detail: React.FC = () => {
 
   const animeId: Anime = data?.Media || [];
 
+  const renderHTMLDescription = (htmlString: string) => {
+    return { __html: htmlString };
+  };
+
   return (
     <>
       <Navbar />
       <BannerImageAnime src={animeId?.bannerImage} alt="banner_anime_image" />
-      <ImagePoster src={animeId?.coverImage?.large} alt="anime_image" />
+      <AnimeContent>
+        <ImagePoster src={animeId?.coverImage?.large} alt="anime_image" />
+        <AnimeTextContent>
+          <p>{animeId.title.romaji}</p>
+          <AnimeDescription dangerouslySetInnerHTML={renderHTMLDescription(animeId?.description || "")}/>
+        </AnimeTextContent>
+      </AnimeContent>
     </>
   );
 };

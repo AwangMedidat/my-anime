@@ -120,8 +120,8 @@ const MyAnimeImage = styled.img`
   max-height: 40px;
   border-radius: 5px;
   @media (min-width: 1000px) {
-    max-width: 1000px;
-    max-height: 100px;
+    max-width: 700px;
+    max-height: 70px;
     padding: -300px;
   }
 `;
