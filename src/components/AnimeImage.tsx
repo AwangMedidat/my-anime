@@ -11,7 +11,7 @@ const StyledAnimeImage = styled.img`
   height: 150px;
   border-radius: 8px;
   @media (min-width: 1000px) {
-    height: 320px;
+    height: 250px;
   }
 `;
 

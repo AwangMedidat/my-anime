@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import MyAnimeImg from "../assets/images/myanime-logo.png";
 
+
 const NavbarContainer = styled.nav`
   background-color: #000852;
-  padding: 10px;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +15,7 @@ const NavbarContainer = styled.nav`
   left: 0;
   right: 0;
   @media (min-width: 1000px) {
-    padding: 25px;
+    padding: 1px;
   }
 `;
 
@@ -120,7 +121,7 @@ const MyAnimeImage = styled.img`
   border-radius: 5px;
   @media (min-width: 1000px) {
     max-width: 1000px;
-    max-height: 75px;
+    max-height: 100px;
     padding: -300px;
   }
 `;
@@ -141,7 +142,6 @@ const Navbar: React.FC = () => {
         <NavbarItem key={1}>
           <NavbarLink href="#">My Collection</NavbarLink>
         </NavbarItem>
-
         <NavbarDropdown>
           <ButtonDropdown onClick={toggleDropdown}>
             {showDropdown ? "X" : "☰"}

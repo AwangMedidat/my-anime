@@ -30,7 +30,7 @@ const AnimeCard = styled.div`
 
   @media (min-width: 1000px) {
     max-width: 240px;
-    max-height: 320px;
+    max-height: 250px;
     margin: 20px 50px;
   }
 `;
