@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import MyAnimeImg from "../assets/images/myanime-logo.png";
 
-
 const NavbarContainer = styled.nav`
   background-color: #000852;
   padding: 3px;
@@ -136,7 +135,9 @@ const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
       <NavbarTitle>
-        <MyAnimeImage src={MyAnimeImg} alt="My Anime" />
+        <a href="/">
+          <MyAnimeImage src={MyAnimeImg} alt="My Anime" />
+        </a>
       </NavbarTitle>
       <NavbarList>
         <NavbarItem key={1}>
